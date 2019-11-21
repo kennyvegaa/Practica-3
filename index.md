@@ -37,10 +37,9 @@ print(Frecuencia)
 Realiza la gráfica a través de una línea y observa sus resultados
 ```markdown
 plot(x, lty = c(1,2),main ="Salarios promedio por hora en la industria del vestido",cex.main=1.5, col= "darkturquoise")
-*
-g1
-*
 ```
+![g1](https://user-images.githubusercontent.com/57273828/69299222-a7d64b00-0bd5-11ea-94e7-78f22750a367.png)
+
 a) ¿Cuál es la media de un proceso Autorregresivo?
 
 ```markdown
@@ -73,10 +72,9 @@ TransformacionDatos= log(x^2)
 ```markdown
 plot(x, main="Modelo Original", xlab="Años", ylab="Salario Promedio", col="darkcyan")
 plot(TransformacionDatos, main="Modelo con Transformación", xlab="Años", ylab="Salario Promedio", col="darkcyan")
-*
-g2
-*
 ```
+![g2](https://user-images.githubusercontent.com/57273828/69299257-be7ca200-0bd5-11ea-8c6d-fdfe51eaee33.png)
+
 Con la nueva transformación de datos realiza la operación de diferenciación (operación dórito), con el año siguiente, ie, restar enero 2019 - enero 2020 o t1 2010-t1 2011. Recuerde usar sólo la función diff( ,lag=).
 ```markdown
 Dorito= diff((TransformacionDatos),lag = 4) 
@@ -86,10 +84,9 @@ Con la nueva serie generada realiza su gráfica lineal.
 par(mfrow=c(1,1))
 plot(Dorito, main="Modelo estacionario", xlab="Años", ylab="Diferencia de salarios respecto al año  inmediato siguiente")
 abline(h=mean(Dorito),col = "darkcyan", lwd=3, lty=2)
-*
-g3
-*
 ```
+![g3](https://user-images.githubusercontent.com/57273828/69299288-d3f1cc00-0bd5-11ea-93ec-30dcae0a09cf.png)
+
 De la anterior gráfica ¿Se puede ajustar un Modelo ARMA con los datos como se tienen en este momento?
 ```markdown
 ARMADorito= TRUE #TRUE (Sí), FALSE (NO)
@@ -121,9 +118,8 @@ Realiza el correlegrama de tu datos
 ```markdown
 Correlograma= acf(Dorito, main="Autocorrelaciones del modelo")
 ```
-*
-g4
-*
+![g4](https://user-images.githubusercontent.com/57273828/69299323-e966f600-0bd5-11ea-8ad6-2e1e000cdff9.png)
+
 ¿Tus datos estan autocorrelacionados entre sí?
 ```markdown
 Autocorrelacion= TRUE #TRUE (Sí), FALSE (NO)
@@ -136,9 +132,8 @@ Realiza el correlegrama de autocorrelaciones parciales de tu datos
 ```markdown
 CorrelogramaParcial= pacf(Dorito, main="Autocorrelaciones parciales del modelo")
 ```
-*
-g5
-*
+![g5](https://user-images.githubusercontent.com/57273828/69299357-ff74b680-0bd5-11ea-84c2-92d15cf1660b.png)
+
 ¿Cúantas líneas se salen de la banda de confianza? (Considerando la primera linea)
 ```markdown
 AutocorrelacionNum2= 5
@@ -200,9 +195,8 @@ Realiza la gráfica y ve el valor proyectado.
  plot(Dorito,xlim= c(1982,1995), col= "darkturquoise")
   lines(Prediccion$pred, col =" darkviolet", lty= 1)
 ```
-*
-g6
-*
+![g6](https://user-images.githubusercontent.com/57273828/69299397-161b0d80-0bd6-11ea-9191-2eb2040bac78.png)
+
 Propón un modelo un menor AIC, si no lo encuentras busca el que mejor AIC te de y ve la última gráfica generada para decidir que parametros se apegan mása tus datos. ¿Cuál es tu modelo propuesto?
 ```markdown
 ARMApara2=c(9,5)
@@ -258,9 +252,8 @@ Realiza la gráfica y ve el valor proyectado.
 plot(Dorito,xlim= c(1982,1995), col= "darkturquoise")
 lines(Prediccion2$pred, col =" darkviolet", lty= 1)
 ```
-*
-g7
-*
+![g7](https://user-images.githubusercontent.com/57273828/69299430-27641a00-0bd6-11ea-922a-648ed911d472.png)
+
 ¿Tiene sentido la última proyección?, si no lo tiene busca cambiando los parametros como desees
 ```markdown
 Sentido = FALSE
@@ -334,6 +327,4 @@ Ahora procedemos a graficar la predicción con los datos anteriores produciendo 
 plot(Dorito,xlim= c(1982,1995), col= "darkturquoise")
 lines(Prediccion3$pred, col =" darkviolet", lty= 1)
 ```
-*
-g8
-*
+![g8](https://user-images.githubusercontent.com/57273828/69299480-3fd43480-0bd6-11ea-945e-25a6a8d1bfc6.png)
