@@ -51,7 +51,8 @@ MediaMediaMovil= 0
 ```
 De la anterior gráfica ¿Se puede ajustar un Modelo ARMA con los datos como se tienen en este momento?
 ```markdown
-ARMATRUEFALSE=  FALSE #TRUE (Sí), FALSE (NO)
+ARMATRUEFALSE=  FALSE 
+#TRUE (Sí), FALSE (NO)
 ```
 Disminuya un poco la variabilidad cálculando la transformación Box-Cox
 ```markdown
@@ -89,11 +90,13 @@ abline(h=mean(Dorito),col = "darkcyan", lwd=3, lty=2)
 
 De la anterior gráfica ¿Se puede ajustar un Modelo ARMA con los datos como se tienen en este momento?
 ```markdown
-ARMADorito= TRUE #TRUE (Sí), FALSE (NO)
+ARMADorito= TRUE 
+#TRUE (Sí), FALSE (NO)
 ```
 La serie de datos es estacionaria con media 0
 ```markdown
-Estacionario= FALSE #TRUE (Sí), FALSE (NO)
+Estacionario= FALSE 
+#TRUE (Sí), FALSE (NO)
 ```
 Realiza la prueba  Phillips-Perron y verifica que la serie sea estacionaria
 ```markdown
@@ -122,7 +125,8 @@ Correlograma= acf(Dorito, main="Autocorrelaciones del modelo")
 
 ¿Tus datos estan autocorrelacionados entre sí?
 ```markdown
-Autocorrelacion= TRUE #TRUE (Sí), FALSE (NO)
+Autocorrelacion= TRUE 
+#TRUE (Sí), FALSE (NO)
 ```
 ¿Cúantas líneas se salen de la banda de confianza? (Considerando la primera linea)
 ```markdown
